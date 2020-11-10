@@ -1,0 +1,151 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: thanks
+  examples: |
+    - thanks
+    - thank you
+    - thank you very much
+    - thank u
+    - cool
+    - great
+    - lovely!
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - sure
+    - yeah
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - nothing
+    - nope
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: get_info
+  examples: |
+    - What are the number of [active](type_of_case) cases in [West Bengal](state)?
+    - How many [deaths](type_of_case) in [Maharashtra](state)?
+    - Any idea on the [confirmed](type_of_case) cases in [Punjab](state)?
+    - What are the [recovered](type_of_case) cases in [Delhi](state)?
+    - [all](type_of_case) cases in [Tamil Nadu](state)?
+    - [active](type_of_case) cases in [karnataka](state)
+    - [confirmed](type_of_case) cases in [assam](state)
+- intent: chitchat
+  examples: |
+    - What's the weather?
+    - give me a discount
+    - You are an idiot
+    - i love this person
+    - Real Madrid suck
+    - how are you?
+    - what is this shit?
+    - damn you
+- intent: thanks+goodbye
+  examples: |
+    - ok cool bye
+    - thanks bye
+    - tata and thank you
+    - awesome cya
+    - nice thanks bye
+    - ok thanks
+- intent: safety_measures
+  examples: |
+    - What can I do to stay safe?
+    - Can you suggest some safety measures for Covid?
+    - Advice me on Covid-19 safety
+    - What to do during this pandemic?
+    - How to stay safe in these times?
+    - How do we protect ourselves from Covid?
+    - Tell me how to be safe now
+    - What do you know about Covid-19 safety measures?
+- intent: symptoms
+  examples: |
+    - Could you tell me some symptoms of Covid-19?
+    - What are some symptoms of Covid?
+    - What happens if you catch Covid-19?
+    - Covid symptoms?
+    - What are its symptoms?
+    - How to know if I have Covid?
+- intent: deny+thanks
+  examples: |
+    - No thank you
+    - Nope i'm good
+    - Nah thanks
+    - Nope, appreciate it
+    - No worries, thanks
+    - Negative, thanks for asking
