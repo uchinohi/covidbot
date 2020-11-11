@@ -35,4 +35,5 @@ Swagnik Banerjee
 [The Covid-19 India Project API](https://github.com/covid19india/api) has been a great help, both to develop this bot and in general, to track the pandemic status across my country. Do check their website [here](https://www.covid19india.org/).
 
 Anyone wanting to improve on this project in any way, feel free to do a pull request. Improvements can come in the form of adding more relevant training data, configuring the pipeline for better processing or even adding new related functionality.
+
 Thanks!
