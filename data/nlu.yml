@@ -116,7 +116,24 @@ nlu:
     - [recovered](type_of_case) cases in [Arunachal Pradesh](state)?
     - [all](type_of_case) cases in [Gujarat](state)?
     - [confirmed](type_of_case) cases in [Rajasthan](state)?
-    - [active](type_of_case) cases in [delhi](state)
+    - [active](type_of_case) cases in [Goa](state)
+    - What are the number of [active](type_of_case) cases in [Chhattisgarh](state)?
+    - How many [deaths](type_of_case) in [Haryana](state)?
+    - Any idea on the [confirmed](type_of_case) cases in [Jharkhand](state)?
+    - What are the [recovered](type_of_case) cases in [Manipur](state)?
+    - [all](type_of_case) cases in [Meghalaya](state)?
+    - [active](type_of_case) cases in [Mizoram](state)
+    - [confirmed](type_of_case) cases in [Nagaland](state)
+    - what are the [recovered](type_of_case) in [Odisha](state)?
+    - [affected](type_of_case) people in [Sikkim](state)?
+    - how many [suffered](type_of_case) in [Tripura](state)?
+    - [deaths](type_of_case) in [Uttar Pradesh](state)
+    - [active](type_of_case) cases in [Uttarakhand](state)?
+    - [recovered](type_of_case) cases in [Telangana](state)?
+    - [all](type_of_case) cases in [Andaman and Nicobar Islands](state)?
+    - [confirmed](type_of_case) cases in [Chandigarh](state)?
+    - [active](type_of_case) cases in [Lakshadweep](state)
+    - Number of [confirmed](type_of_case) in [Puducherry](state)
 - intent: chitchat
   examples: |
     - What's the weather?
@@ -168,3 +185,7 @@ nlu:
     - died
     - death
     - dead
+- synonym: confirmed
+  examples: |
+    - affected
+    - suffered

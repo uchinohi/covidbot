@@ -2,61 +2,71 @@ version: "2.0"
 
 stories:
 
-- story: happy path happy
+- story: happy path
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: get_info
-  - action: action_covid_search
-  - action: utter_anything_else
-  - intent: deny+thanks
-  - action: utter_welcome
-  - intent: goodbye
-  - action: utter_goodbye
-
-- story: happy path sad
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: get_info
-  - action: action_covid_search
-  - action: utter_anything_else
-  - intent: affirm
   - action: utter_how_can_i_help
-  - intent: get_info
-  - action: action_covid_search
-  - intent: thanks+goodbye
-  - action: utter_welcome+goodbye
+  # - intent: get_info
+  # - action: action_covid_search
+  # - action: utter_anything_else
+  # - intent: deny+thanks
+  # - action: utter_welcome
+  # - intent: goodbye
+  # - action: utter_goodbye
 
-- story: happy path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: get_info
-  - action: action_covid_search
-  - intent: thanks+goodbye
-  - action: utter_welcome
-  - action: utter_goodbye
+# - story: happy path sad
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: get_info
+#   - action: action_covid_search
+#   - action: utter_anything_else
+#   - intent: affirm
+#   - action: utter_how_can_i_help
+#   - intent: get_info
+#   - action: action_covid_search
+#   - intent: thanks+goodbye
+#   - action: utter_welcome+goodbye
+
+# - story: happy path 2
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: get_info
+#   - action: action_covid_search
+#   - intent: thanks+goodbye
+#   - action: utter_welcome
+#   - action: utter_goodbye
 
 - story: sad path
   steps:
   - intent: greet
   - action: utter_greet
+  - action: utter_how_can_i_help
   - intent: deny
   - action: utter_goodbye
 
-- story: affirmation path
+- story: sad path 2
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: affirm
   - action: utter_how_can_i_help
-  - intent: get_info
-  - action: action_covid_search
-  - intent: thanks
-  - action: utter_welcome
-  - intent: goodbye
+  - intent: deny+thanks
   - action: utter_goodbye
+
+# - story: affirmation path
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: affirm
+#   - action: utter_how_can_i_help
+#   - intent: get_info
+#   - action: action_covid_search
+#   - intent: thanks
+#   - action: utter_welcome
+#   - intent: goodbye
+#   - action: utter_goodbye
 
 # - story: interactive_story_1
 #   steps:
@@ -94,17 +104,17 @@ stories:
 #   - intent: goodbye
 #   - action: utter_goodbye
 
-- story: interactive_story_1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: get_info
-    entities:
-    - type_of_case: active
-    - state: delhi
-  - action: action_covid_search
-  - intent: thanks
-  - action: utter_welcome
+# - story: interactive_story_1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: get_info
+#     entities:
+#     - type_of_case: active
+#     - state: delhi
+#   - action: action_covid_search
+#   - intent: thanks
+#   - action: utter_welcome
 
 - story: thank you story
   steps:
