@@ -26,3 +26,8 @@ rules:
   steps:
   - intent: chitchat
   - action: utter_chitchat
+
+# - rule: Get info any time
+#   steps:
+#     - intent: get_info
+#     - action: action_covid_search

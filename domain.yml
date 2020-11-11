@@ -3,11 +3,11 @@ session_config:
   carry_over_slots_to_new_session: true
 intents:
 - get_info
-- affirm
+- goodbye
 - greet
+- affirm
 - deny
 - thanks+goodbye
-- goodbye
 - mood_great
 - mood_unhappy
 - bot_challenge
@@ -47,7 +47,7 @@ responses:
   utter_chitchat:
   - text: Okay but you are deviating from worldwide pandemic!
   - text: I only know about Covid but I am not Chinese!
-  utter_thanks+goodbye:
+  utter_welcome+goodbye:
   - text: Most welcome, talk to you later!
   - text: No problem, bye, take care!
 actions:
@@ -58,5 +58,5 @@ actions:
 - utter_goodbye
 - utter_greet
 - utter_how_can_i_help
-- utter_thanks+goodbye
+- utter_welcome+goodbye
 version: '2.0'

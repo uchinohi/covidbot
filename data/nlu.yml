@@ -28,6 +28,7 @@ nlu:
     - see you around
     - bye bye
     - see you later
+    - ok bye
 - intent: thanks
   examples: |
     - thanks
@@ -47,6 +48,7 @@ nlu:
     - correct
     - sure
     - yeah
+    - cool
 - intent: deny
   examples: |
     - no
@@ -58,6 +60,7 @@ nlu:
     - not really
     - nothing
     - nope
+    - nah
 - intent: mood_great
   examples: |
     - perfect
@@ -105,6 +108,15 @@ nlu:
     - [all](type_of_case) cases in [Tamil Nadu](state)?
     - [active](type_of_case) cases in [karnataka](state)
     - [confirmed](type_of_case) cases in [assam](state)
+    - what are the [recovered](type_of_case) in [Andhra Pradesh](state)?
+    - how many [died](type_of_case) in [Madhya Pradesh](state)?
+    - number of [dead](type_of_case) people in [Kerala](state)?
+    - [deaths](type_of_case) in [Bihar](state)
+    - [active](type_of_case) cases in [Himachal Pradesh](state)?
+    - [recovered](type_of_case) cases in [Arunachal Pradesh](state)?
+    - [all](type_of_case) cases in [Gujarat](state)?
+    - [confirmed](type_of_case) cases in [Rajasthan](state)?
+    - [active](type_of_case) cases in [delhi](state)
 - intent: chitchat
   examples: |
     - What's the weather?
@@ -115,6 +127,7 @@ nlu:
     - how are you?
     - what is this shit?
     - damn you
+    - what the hell
 - intent: thanks+goodbye
   examples: |
     - ok cool bye
@@ -133,6 +146,7 @@ nlu:
     - How do we protect ourselves from Covid?
     - Tell me how to be safe now
     - What do you know about Covid-19 safety measures?
+    - How to prevent it?
 - intent: symptoms
   examples: |
     - Could you tell me some symptoms of Covid-19?
@@ -149,3 +163,8 @@ nlu:
     - Nope, appreciate it
     - No worries, thanks
     - Negative, thanks for asking
+- synonym: deaths
+  examples: |
+    - died
+    - death
+    - dead

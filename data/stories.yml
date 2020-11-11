@@ -26,7 +26,7 @@ stories:
   - intent: get_info
   - action: action_covid_search
   - intent: thanks+goodbye
-  - action: utter_thanks+goodbye
+  - action: utter_welcome+goodbye
 
 - story: happy path 2
   steps:
@@ -58,24 +58,60 @@ stories:
   - intent: goodbye
   - action: utter_goodbye
 
+# - story: interactive_story_1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: affirm
+#   - action: utter_how_can_i_help
+#   - intent: get_info
+#     entities:
+#     - type_of_case: active
+#     - state: karnataka
+#   - action: action_covid_search
+#   - intent: thanks+goodbye
+#   - action: utter_thanks+goodbye
+#   - intent: get_info
+#     entities:
+#     - type_of_case: confirmed
+#     - state: assam
+#   - action: action_covid_search
+#   - action: utter_anything_else
+#   - intent: deny
+#   - action: utter_goodbye
+
+# - story: interactive_story_1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: affirm
+#   - action: utter_how_can_i_help
+#   - intent: get_info
+#     entities:
+#     - type_of_case: deaths
+#     - state: Kerala
+#   - action: action_covid_search
+#   - intent: goodbye
+#   - action: utter_goodbye
+
 - story: interactive_story_1
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: affirm
-  - action: utter_how_can_i_help
   - intent: get_info
     entities:
     - type_of_case: active
-    - state: karnataka
+    - state: delhi
   - action: action_covid_search
+  - intent: thanks
+  - action: utter_welcome
+
+- story: thank you story
+  steps:
+  - intent: thanks
+  - action: utter_welcome
+
+- story: thank you and bye story
+  steps:
   - intent: thanks+goodbye
-  - action: utter_thanks+goodbye
-  - intent: get_info
-    entities:
-    - type_of_case: confirmed
-    - state: assam
-  - action: action_covid_search
-  - action: utter_anything_else
-  - intent: deny
-  - action: utter_goodbye
+  - action: utter_welcome+goodbye
