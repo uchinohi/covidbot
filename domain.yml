@@ -21,11 +21,13 @@ entities:
 - type_of_case
 responses:
   utter_greet:
-  - text: Hey! I am covid bot. I can provide you different types of info available for your state regarding Covid-19.
-  - text: Hi there! I hope you're doing well! I know about all types of cases of Covid-19 in your state.
+  - text: Hey! I am covid bot. I can provide you different types of info available
+      for your state regarding Covid-19.
+  - text: Hi there! I hope you're doing well! I know about all types of cases of Covid-19
+      in your state.
   utter_cheer_up:
-  - text: 'Here is something to cheer you up:'
-    image: https://i.imgur.com/nGF1K8f.jpg
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
   utter_how_can_i_help:
   - text: What information do you want?
   - text: What do you want to know?
@@ -58,4 +60,3 @@ actions:
 - utter_greet
 - utter_how_can_i_help
 - utter_welcome+goodbye
-version: '2.0'

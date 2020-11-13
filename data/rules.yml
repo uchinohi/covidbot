@@ -31,3 +31,13 @@ rules:
   steps:
     - intent: get_info
     - action: action_covid_search
+
+- rule: Say welcome anytime someone says thanks
+  steps:
+    - intent: thanks
+    - action: utter_welcome
+
+- rule: Say welcome anytime someone says thanks
+  steps:
+    - intent: thanks+goodbye
+    - action: utter_welcome+goodbye
