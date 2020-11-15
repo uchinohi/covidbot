@@ -3,12 +3,10 @@ services:
   rasa:
     image: rasa/rasa:2.0.6-full
     ports:
-      - 5005:5005
-    volumes:
-      - ./:/app
+      - 5005:80
     command:
       - run
   app:
     image: uchinohi/covidbot-action:11132020
     expose:
-     - "5055"
+     - "80"
