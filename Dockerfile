@@ -6,6 +6,6 @@ RUN chmod +x /app/start_services.sh
 RUN cd /app/
 WORKDIR /app
 RUN rasa train --config ./config.yml
-RUN rasa run actions -p $PORT | sed 's/=//'
-RUN rasa run -p $PORT -m ./models --credentials ./credentials.yml --enable-api --log-file out.log --endpoints ./endpoints.yml | sed ‘s/=//’)
+RUN rasa run actions
+RUN rasa run -p $PORT -m ./models --credentials ./credentials.yml --enable-api --log-file out.log --endpoints ./endpoints.yml | sed ‘s/=//’
 # CMD /app/start_services.sh
