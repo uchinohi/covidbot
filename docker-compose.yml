@@ -9,6 +9,6 @@ services:
     command:
       - run
   app:
-    image: <image:tag>
+    image: uchinohi/covidbot-action:11132020
     expose:
      - "5055"
