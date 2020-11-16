@@ -13,7 +13,7 @@ RUN pip install -r requirements.txt
 # By best practices, don't run the code with root user
 USER 1001
 # RUN chmod +x /app/start_services.sh
-RUN cd /app/
+RUN cd /app
 
 RUN rasa train
 RUN rasa run actions
