@@ -5,10 +5,8 @@ WORKDIR /app
 
 # Change back to root user to install dependencies
 USER root
-RUN apt-get update && apt-get install -y python3 python3-pip
+RUN apt-get update && apt-get install -y python3 python3-pip && pip3 install rasa
 
-# Install extra requirements for actions code, if necessary (uncomment next line)
-RUN pip3 install -r requirements.txt
 
 # By best practices, don't run the code with root user
 USER 1001

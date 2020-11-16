@@ -7,13 +7,10 @@ language: en
 # # See https://rasa.com/docs/rasa/tuning-your-model for more information.
 
 pipeline:
-  - name: "SpacyNLP"
-    model: "en_core_web_md"
-    case_sensitive: False
-  - name: SpacyTokenizer
+  - name: WhiteSpaceTokenizer
     "intent_tokenization_flag": True
     "intent_split_symbol": "+"
-  - name: SpacyEntityExtractor
+  - name: CRFEntityExtractor
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
   - name: CountVectorsFeaturizer
