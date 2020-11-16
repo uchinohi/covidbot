@@ -7,5 +7,5 @@ RUN cd /app/
 WORKDIR /app
 RUN rasa train --config ./config.yml
 RUN rasa run actions
-RUN rasa run -m ./models --credentials ./credentials.yml --enable-api --endpoints ./endpoints.yml
+RUN rasa run
 # CMD /app/start_services.sh
