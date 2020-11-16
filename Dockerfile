@@ -17,5 +17,5 @@ RUN cd /app
 
 RUN rasa train
 RUN rasa run actions
-RUN rasa run
+RUN rasa run --enable-api
 # CMD /app/start_services.sh
