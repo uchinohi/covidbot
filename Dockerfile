@@ -5,7 +5,7 @@ WORKDIR /app
 
 # Change back to root user to install dependencies
 USER root
-RUN apt-get update && apt-get install -y python3 python3-pip && pip3 install rasa --use-feature=2020-resolver
+RUN apt-get update && apt-get install -y python3 python3-pip && python -m pip install --upgrade pip && pip install rasa --use-feature=2020-resolver
 
 
 # By best practices, don't run the code with root user
