@@ -8,7 +8,7 @@ USER root
 RUN apt-get update && apt-get install -y python3 python3-pip
 
 # Install extra requirements for actions code, if necessary (uncomment next line)
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
 
 # By best practices, don't run the code with root user
 USER 1001
