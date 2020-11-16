@@ -7,5 +7,5 @@ RUN cd /app/
 WORKDIR /app
 RUN rasa train --config ./config.yml
 RUN rasa run actions
-RUN rasa run -p $PORT -m ./models --credentials ./credentials.yml --enable-api --log-file out.log --endpoints ./endpoints.yml | sed ‘s/=//’
+RUN rasa run -m ./models --credentials ./credentials.yml --enable-api --endpoints ./endpoints.yml
 # CMD /app/start_services.sh
