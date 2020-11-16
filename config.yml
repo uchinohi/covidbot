@@ -7,7 +7,7 @@ language: en
 # # See https://rasa.com/docs/rasa/tuning-your-model for more information.
 
 pipeline:
-  - name: WhiteSpaceTokenizer
+  - name: WhitespaceTokenizer
     "intent_tokenization_flag": True
     "intent_split_symbol": "+"
   - name: CRFEntityExtractor
