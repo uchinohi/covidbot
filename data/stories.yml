@@ -2,48 +2,74 @@ version: "2.0"
 
 stories:
 
-- story: happy path
+- story: greet path
   steps:
   - intent: greet
   - action: utter_greet
-  - action: utter_how_can_i_help
-  # - intent: get_info
-  # - action: action_covid_search
-  # - action: utter_anything_else
-  # - intent: deny+thanks
-  # - action: utter_welcome
-  # - intent: goodbye
-  # - action: utter_goodbye
+  - action: utter_greet_question
 
-# - story: happy path sad
-#   steps:
-#   - intent: greet
-#   - action: utter_greet
-#   - intent: get_info
-#   - action: action_covid_search
-#   - action: utter_anything_else
-#   - intent: affirm
-#   - action: utter_how_can_i_help
-#   - intent: get_info
-#   - action: action_covid_search
-#   - intent: thanks+goodbye
-#   - action: utter_welcome+goodbye
+- story: happy path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_greet_question
+  - intent: get_info
+  - action: action_covid_search
+  - intent: thanks
+  - action: utter_welcome
+  - intent: goodbye
+  - action: utter_goodbye
 
-# - story: happy path 2
-#   steps:
-#   - intent: greet
-#   - action: utter_greet
-#   - intent: get_info
-#   - action: action_covid_search
-#   - intent: thanks+goodbye
-#   - action: utter_welcome
-#   - action: utter_goodbye
+- story: happy path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_greet_question
+  - intent: ask_cases
+  - action: utter_ask_location
+  - intent: tell_location
+  - action: action_covid_search
+  - intent: thanks+goodbye
+  - action: utter_welcome+goodbye
+
+- story: happy sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_greet_question
+  - intent: get_info
+  - action: action_covid_search
+  - intent: more_info
+  - action: utter_more_info
+  - intent: ask_cases
+  - action: utter_ask_location
+  - intent: tell_location
+  - action: action_covid_search
+  - intent: thanks
+  - action: utter_welcome
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: happy sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_greet_question
+  - intent: get_info
+  - action: action_covid_search
+  - intent: more_info
+  - action: utter_more_info
+  - intent: get_info
+  - action: action_covid_search
+  - intent: thanks+goodbye
+  - action: utter_welcome+goodbye
+
 
 - story: sad path
   steps:
   - intent: greet
   - action: utter_greet
-  - action: utter_how_can_i_help
+  - action: utter_greet_question
   - intent: deny
   - action: utter_goodbye
 
@@ -51,7 +77,7 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - action: utter_how_can_i_help
+  - action: utter_greet_question
   - intent: deny+thanks
   - action: utter_goodbye
 

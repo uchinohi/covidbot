@@ -8,7 +8,7 @@ nlu:
     - hello there
     - good morning
     - good evening
-    - moin
+    - mornin
     - hey there
     - let's go
     - hey dude
@@ -38,6 +38,7 @@ nlu:
     - cool
     - great
     - lovely!
+    - ok thanks
 - intent: affirm
   examples: |
     - yes
@@ -99,6 +100,7 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+    - who are you?
 - intent: get_info
   examples: |
     - What are the number of [active](type_of_case) cases in [West Bengal](state)?
@@ -130,7 +132,7 @@ nlu:
     - [deaths](type_of_case) in [Uttar Pradesh](state)
     - [active](type_of_case) cases in [Uttarakhand](state)?
     - [recovered](type_of_case) cases in [Telangana](state)?
-    - [all](type_of_case) cases in [Andaman and Nicobar Islands](state)?
+    - What is the [present condition](type_of_case) in [Andaman and Nicobar Islands](state)?
     - [confirmed](type_of_case) cases in [Chandigarh](state)?
     - [active](type_of_case) cases in [Lakshadweep](state)
     - Number of [confirmed](type_of_case) in [Puducherry](state)
@@ -145,6 +147,7 @@ nlu:
     - what is this shit?
     - damn you
     - what the hell
+    - i don't care about anything
 - intent: thanks+goodbye
   examples: |
     - ok cool bye
@@ -152,7 +155,6 @@ nlu:
     - tata and thank you
     - awesome cya
     - nice thanks bye
-    - ok thanks
 - intent: safety_measures
   examples: |
     - What can I do to stay safe?
@@ -164,6 +166,7 @@ nlu:
     - Tell me how to be safe now
     - What do you know about Covid-19 safety measures?
     - How to prevent it?
+    - Help me stay protected from Covid
 - intent: symptoms
   examples: |
     - Could you tell me some symptoms of Covid-19?
@@ -172,6 +175,7 @@ nlu:
     - Covid symptoms?
     - What are its symptoms?
     - How to know if I have Covid?
+    - What can coronavirus do to us?
 - intent: deny+thanks
   examples: |
     - No thank you
@@ -180,6 +184,35 @@ nlu:
     - Nope, appreciate it
     - No worries, thanks
     - Negative, thanks for asking
+- intent: ask_cases
+  examples: |
+    - How many have [recovered](type_of_case)?
+    - How many [died](type_of_case)?
+    - What is the [present condition](type_of_case)?
+    - What's the number of [active](type_of_case) cases?
+    - What is the [present situation](type_of_case) in my state?
+    - How many [confirmed](type_of_case) here?
+    - How many [dead](type_of_case) people here?
+    - Do you know number of [confirmed](type_of_case) in my state?
+    - What [all](type_of_case) do you know about Covid in my state?
+    - Count of [confirmed](type_of_case) cases?
+- intent: tell_location
+  examples: |
+    - Yeah I live in [Uttar Pradesh](state)
+    - [West Bengal](state)
+    - [Delhi](state) is my state
+    - I am in [Bihar](state)
+    - State is [Jharkhand](state)
+    - Yes it is [Goa](state)
+    - It is [Maharashtra](state)
+- intent: more_info
+  examples: |
+    - I want to know more
+    - I want to ask more questions
+    - I have more questions
+    - Can you answer more queries?
+    - I need more information
+    - I need more answers
 - synonym: deaths
   examples: |
     - died
@@ -189,3 +222,7 @@ nlu:
   examples: |
     - affected
     - suffered
+- synonym: all
+  examples: |
+    - present condition
+    - present situation

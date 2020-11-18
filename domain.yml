@@ -16,38 +16,40 @@ intents:
 - safety_measures
 - symptoms
 - deny+thanks
+- ask_cases
+- more_info
+- tell_location
 entities:
 - state
 - type_of_case
 responses:
   utter_greet:
-  - text: Hey! I am covid bot. I can provide you different types of info available
-      for your state regarding Covid-19.
-  - text: Hi there! I hope you're doing well! I know about all types of cases of Covid-19
-      in your state.
-  utter_cheer_up:
-  - image: https://i.imgur.com/nGF1K8f.jpg
-    text: 'Here is something to cheer you up:'
-  utter_how_can_i_help:
-  - text: What information do you want?
-  - text: What do you want to know?
+  - text: Hey! I am covid bot from India. I can provide you different types of info available
+      for your state regarding Covid-19 and some GK about the same.
+  - text: Hello from India! I hope you're doing well! I know about all types of cases of Covid-19
+      in your state and its symptoms and preventions.
+  utter_ask_location:
+  - text: Okay, which state?
+  - text: Which state are you in?
+  utter_more_info:
+  - text: Okay, what information do you want?
+  - text: Alright, what do you want to know?
   utter_happy:
   - text: Great, carry on!
   utter_goodbye:
   - text: Goodbye then, stay safe!
   - text: Ok bye bye then, stay at home!
   utter_iamabot:
-  - text: I am a bot, powered by Rasa.
-  utter_anything_else:
-  - text: Anything else I can do to help?
-  - text: Can I help you in any other way?
-  - text: Do you need any more information?
+  - text: I am a bot, powered by Rasa, coded in Python.
+  utter_greet_question:
+  - text: Anything you need to know?
+  - text: Do you need any information?
   utter_welcome:
   - text: You're welcome.
   - text: My pleasure!
   utter_chitchat:
   - text: Okay but you are deviating from worldwide pandemic!
-  - text: I only know about Covid but I am not Chinese!
+  - text: Well, I only know about Covid (but I am not Chinese)!
   utter_welcome+goodbye:
   - text: Most welcome, talk to you later!
   - text: No problem, bye, take care!
@@ -55,8 +57,6 @@ actions:
 - action_covid_safety
 - action_covid_search
 - action_covid_symptoms
-- utter_anything_else
 - utter_goodbye
 - utter_greet
-- utter_how_can_i_help
 - utter_welcome+goodbye
