@@ -27,6 +27,13 @@ To talk with the bot presently, you would need to install Rasa on your system. C
 Our bot can provide any type of case by numbers as reported by Indian states as and when requested apart from providing information about Covid symptoms and safety measures.
 Presently, it cannot do much as I have not been able to provide more data for training the models. Chatbots like this require significant amount of data for training and since this bot is not exposed to real users, we won't get much real world data for our model as well. The best practice is to create a functional bot and deploy it as soon as possible to users to collect real world data to train the model efficiently.
 
+# NEW
+## Whatsapp Integration
+At the moment, there is no official documentation or support to integrate Rasa with Whatsapp. However, a workaround was available on the web, [here](https://medium.com/@alfredfranciz/integrate-rasa-with-whatsapp-1b1477b51090) I have used **_Twilio_** to integrate my bot with Whatsapp using my local machine as a host. All the http traffic is tunneled though a **_ngrok_** URL. Interested developers may follow through the article for the same, it is easy and intuitive to implement.
+**Note:-**
+1. For the bot to send and receive messages effectively, the rasa open source, rasa action server and ngrok must be running at all times on your host (here, my own laptop).
+2. ngrok provides a temporary tunnel URL and is changed if you restart it. The new URL must be updated in your Twilio configuration for the integration to work properly.
+
 
 ## Authors
 Swagnik Banerjee
