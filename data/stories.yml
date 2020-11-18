@@ -33,7 +33,9 @@ stories:
   - action: utter_greet_question
   - intent: get_info
   - action: action_covid_search
-  - intent: more_info
+  - or:
+     - intent: more_info
+     - intent: thanks+more_info
   - action: utter_more_info
   - intent: ask_cases
   - action: utter_ask_location
@@ -57,6 +59,15 @@ stories:
   - action: action_covid_search
   - intent: thanks+goodbye
   - action: utter_welcome+goodbye
+
+- story: info path
+  steps:
+  - or:
+    - intent: more_info
+    - intent: thanks+more_info
+  - action: utter_more_info
+  - intent: get_info
+  - action: action_covid_search
 
 
 - story: sad path

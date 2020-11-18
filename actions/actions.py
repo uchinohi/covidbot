@@ -56,8 +56,8 @@ class ActionCovidSearch(Action):
         response = requests.get("https://api.covid19india.org/data.json").json()
 
         # entities = tracker.latest_message['entities']
-        state= tracker.get_slot('state')
-        case= tracker.get_slot('type_of_case')
+        state= tracker.get_slot('state').title()
+        case= tracker.get_slot('type_of_case').lower()
 
         # for e in entities:
         #     if e['entity'] == "state":
@@ -68,11 +68,11 @@ class ActionCovidSearch(Action):
         
         message="Sorry you have entered a wrong location! I can only tell you about Indian States."
         for data in response['statewise']:
-            if data['state'] == state.title():
+            if data['state'] == state:
                 if case == "all":
-                    message = "For "+state.title()+":-\nActive: "+data['active']+"\nConfirmed: "+data['confirmed']+"\nRecovered: "+data['recovered']+"\nDeaths: "+data['deaths']
+                    message = "For "+state+":-\nActive: "+data['active']+"\nConfirmed: "+data['confirmed']+"\nRecovered: "+data['recovered']+"\nDeaths: "+data['deaths']
                 else:
-                    message= "For "+state.title()+", number of "+case+" cases are "+data[case]
+                    message= "For "+state+", number of "+case+" cases are "+data[case]
 
         dispatcher.utter_message(message)
 

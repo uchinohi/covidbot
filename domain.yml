@@ -19,6 +19,7 @@ intents:
 - ask_cases
 - more_info
 - tell_location
+- thanks+more_info
 entities:
 - state
 - type_of_case

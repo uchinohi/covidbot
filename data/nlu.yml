@@ -31,14 +31,15 @@ nlu:
     - ok bye
 - intent: thanks
   examples: |
-    - thanks
-    - thank you
+    - Thanks
+    - Thank you
     - thank you very much
     - thank u
     - cool
     - great
     - lovely!
     - ok thanks
+    - thanks
 - intent: affirm
   examples: |
     - yes
@@ -201,6 +202,10 @@ nlu:
     - Do you know number of [confirmed](type_of_case) in my state?
     - What [all](type_of_case) do you know about Covid in my state?
     - Count of [confirmed](type_of_case) cases?
+    - [Covid](type_of_case) cases in my state
+    - [covid](type_of_case) cases here
+    - [total](type_of_case) cases here
+    - [Total](type_of_case) cases in my state
 - intent: tell_location
   examples: |
     - Yeah I live in [Uttar Pradesh](state)
@@ -218,6 +223,18 @@ nlu:
     - Can you answer more queries?
     - I need more information
     - I need more answers
+    - i wish to know more
+    - tell me more
+- intent: thanks+more_info
+  examples: |
+    - thank u, want to know more
+    - thanks, i want to ask more questions
+    - thanks but i have more questions
+    - Okay thanks but can you answer more queries?
+    - cool thanks. I need more information
+    - thank you. I need more answers though
+    - thanks, i wish to know more
+    - okay thank u, tell me more
 - synonym: deaths
   examples: |
     - died
@@ -231,3 +248,7 @@ nlu:
   examples: |
     - present condition
     - present situation
+    - covid
+    - Covid
+    - total
+    - Total
