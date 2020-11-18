@@ -29,7 +29,7 @@ Presently, it cannot do much as I have not been able to provide more data for tr
 
 # NEW
 ## Whatsapp Integration
-At the moment, there is no official documentation or support to integrate Rasa with Whatsapp. However, a workaround was available on the web, [here](https://medium.com/@alfredfranciz/integrate-rasa-with-whatsapp-1b1477b51090) I have used **_Twilio_** to integrate my bot with Whatsapp using my local machine as a host. All the http traffic is tunneled though a **_ngrok_** URL. Interested developers may follow through the article for the same, it is easy and intuitive to implement.
+At the moment, there is no official documentation or support to integrate Rasa with Whatsapp. However, a workaround was available on the web, [here.](https://medium.com/@alfredfranciz/integrate-rasa-with-whatsapp-1b1477b51090) I have used **_Twilio_** to integrate my bot with Whatsapp using my local machine as a host. All the http traffic is tunneled though a **_ngrok_** URL. Interested developers may follow through the article for the same, it is easy and intuitive to implement.
 **Note:-**
 1. For the bot to send and receive messages effectively, the rasa open source, rasa action server and ngrok must be running at all times on your host (here, my own laptop).
 2. ngrok provides a temporary tunnel URL and is changed if you restart it. The new URL must be updated in your Twilio configuration for the integration to work properly.
