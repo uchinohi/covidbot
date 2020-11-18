@@ -27,10 +27,10 @@ rules:
   - intent: chitchat
   - action: utter_chitchat
 
-- rule: Get info any time
-  steps:
-    - intent: get_info
-    - action: action_covid_search
+# - rule: Get info any time
+#   steps:
+#     - intent: get_info
+#     - action: action_covid_search
 
 - rule: Say welcome anytime someone says thanks
   steps:
@@ -41,3 +41,9 @@ rules:
   steps:
     - intent: thanks+goodbye
     - action: utter_welcome+goodbye
+
+- rule: greet user
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_greet_question

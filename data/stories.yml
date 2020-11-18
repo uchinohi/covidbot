@@ -2,12 +2,6 @@ version: "2.0"
 
 stories:
 
-- story: greet path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - action: utter_greet_question
-
 - story: happy path 1
   steps:
   - intent: greet
@@ -141,13 +135,3 @@ stories:
 #   - action: action_covid_search
 #   - intent: thanks
 #   - action: utter_welcome
-
-- story: thank you story
-  steps:
-  - intent: thanks
-  - action: utter_welcome
-
-- story: thank you and bye story
-  steps:
-  - intent: thanks+goodbye
-  - action: utter_welcome+goodbye
