@@ -2,17 +2,17 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- get_info
+- thanks+goodbye
 - goodbye
+- get_info
+- thanks
 - greet
 - affirm
 - deny
-- thanks+goodbye
 - mood_great
 - mood_unhappy
 - bot_challenge
 - chitchat
-- thanks
 - safety_measures
 - symptoms
 - deny+thanks
@@ -22,12 +22,17 @@ intents:
 entities:
 - state
 - type_of_case
+slots:
+  state:
+    type: text
+    influence_conversation: true
+  type_of_case:
+    type: text
+    influence_conversation: true
 responses:
   utter_greet:
-  - text: Hey! I am covid bot from India. I can provide you different types of info available
-      for your state regarding Covid-19 and some GK about the same.
-  - text: Hello from India! I hope you're doing well! I know about all types of cases of Covid-19
-      in your state and its symptoms and preventions.
+  - text: Hey! I am covid bot from India. I can provide you different types of info available for your state regarding Covid-19 and some GK about the same.
+  - text: Hello from India! I hope you're doing well! I know about all types of cases of Covid-19 in your state and its symptoms and preventions.
   utter_ask_location:
   - text: Okay, which state?
   - text: Which state are you in?
@@ -57,6 +62,10 @@ actions:
 - action_covid_safety
 - action_covid_search
 - action_covid_symptoms
+- utter_ask_location
 - utter_goodbye
 - utter_greet
+- utter_greet_question
+- utter_welcome
 - utter_welcome+goodbye
+version: '2.0'

@@ -55,15 +55,15 @@ class ActionCovidSearch(Action):
 
         response = requests.get("https://api.covid19india.org/data.json").json()
 
-        entities = tracker.latest_message['entities']
-        state= None
-        case= None
+        # entities = tracker.latest_message['entities']
+        state= tracker.get_slot('state')
+        case= tracker.get_slot('type_of_case')
 
-        for e in entities:
-            if e['entity'] == "state":
-                state = e['value']
-            if e['entity'] == "type_of_case":
-                case = e['value']
+        # for e in entities:
+        #     if e['entity'] == "state":
+        #         state = e['value']
+        #     if e['entity'] == "type_of_case":
+        #         case = e['value']
 
         
         message="Sorry you have entered a wrong location! I can only tell you about Indian States."

@@ -7,15 +7,21 @@ language: en
 # # See https://rasa.com/docs/rasa/tuning-your-model for more information.
 
 pipeline:
-  - name: "SpacyNLP"
-    model: "en_core_web_md"
-    case_sensitive: False
-  - name: SpacyTokenizer
+  # - name: "SpacyNLP"
+  #   model: "en_core_web_md"
+  #   case_sensitive: False
+  # - name: SpacyTokenizer
+  #   "intent_tokenization_flag": True
+  #   "intent_split_symbol": "+"
+  # - name: SpacyFeaturizer
+  #   alias: "spacy"
+  - name: WhitespaceTokenizer
     "intent_tokenization_flag": True
     "intent_split_symbol": "+"
-  - name: SpacyEntityExtractor
   - name: RegexFeaturizer
+    alias: "regex"
   - name: LexicalSyntacticFeaturizer
+    alias: "lexi"
   - name: CountVectorsFeaturizer
   - name: CountVectorsFeaturizer
     analyzer: "char_wb"
@@ -37,6 +43,7 @@ policies:
 # # If you'd like to customize them, uncomment and adjust the policies.
 # # See https://rasa.com/docs/rasa/policies for more information.
   - name: MemoizationPolicy
+    max_history: 5
   - name: TEDPolicy
     max_history: 5
     epochs: 100

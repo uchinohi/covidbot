@@ -135,3 +135,57 @@ stories:
 #   - action: action_covid_search
 #   - intent: thanks
 #   - action: utter_welcome
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_greet_question
+  - intent: get_info
+    entities:
+    - type_of_case: active
+    - state: goa
+  - slot_was_set:
+    - state: goa
+  - slot_was_set:
+    - type_of_case: active
+  - action: action_covid_search
+  - intent: thanks
+  - action: utter_welcome
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_greet_question
+  - intent: get_info
+    entities:
+    - type_of_case: deaths
+  - slot_was_set:
+    - type_of_case: deaths
+  - action: utter_ask_location
+  - intent: get_info
+    entities:
+    - state: madhya pradesh
+  - slot_was_set:
+    - state: madhya pradesh
+  - action: action_covid_search
+  - action: action_covid_search
+
+- story: interactive_story_3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_greet_question
+  - intent: get_info
+    entities:
+    - type_of_case: deaths
+    - state: goa
+  - slot_was_set:
+    - state: goa
+  - slot_was_set:
+    - type_of_case: deaths
+  - action: action_covid_search
+  - intent: thanks+goodbye
+  - action: utter_welcome+goodbye
