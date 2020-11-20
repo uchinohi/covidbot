@@ -18,8 +18,6 @@ pipeline:
   - name: WhitespaceTokenizer
     "intent_tokenization_flag": True
     "intent_split_symbol": "+"
-  - name: RegexFeaturizer
-    alias: "regex"
   - name: LexicalSyntacticFeaturizer
     alias: "lexi"
   - name: CountVectorsFeaturizer

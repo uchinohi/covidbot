@@ -137,10 +137,10 @@ nlu:
     - [confirmed](type_of_case) cases in [Chandigarh](state)?
     - [active](type_of_case) cases in [Lakshadweep](state)
     - Number of [confirmed](type_of_case) in [Puducherry](state)
-    - [active](type_of_case) cases in [goa](state)
+    - [active](type_of_case) cases in [jammu & kashmir](state)
     - [death]{"entity": "type_of_case", "value": "deaths"} cases in my state
-    - [madhya pradesh](state)
-    - [death]{"entity": "type_of_case", "value": "deaths"} cases in [goa](state)
+    - [Jammu and Kashmir](state)
+    - [death]{"entity": "type_of_case", "value": "deaths"} cases in [J&K](state)
 - intent: chitchat
   examples: |
     - What's the weather?
@@ -252,3 +252,8 @@ nlu:
     - Covid
     - total
     - Total
+- synonym: Jammu and Kashmir
+  examples: |
+    - J&K
+    - j&k
+    - jammu & kashmir
